@@ -11,6 +11,13 @@
   <div class="grid-content-wrapper"> <br> <br> <br>
     <h1 class="blue text-center text-enormouser">BlueOS</h1>
     <hr class="blue hr-short hr-center hr-thick"> <br>
+
+<div class="menubar">
+  <a href="index.html"><button id="active">Introduction</button></a>
+  <a href="index2.html"><button>Downloads</button></a>
+  <a href="index3.html"><button>Crew</button></a>
+</div> <br> <br>
+
     <h3 class="blue text-center">Introduction:</h3>
     <div class="faq-section">
       <div class="faq-card">
@@ -20,7 +27,7 @@
       </div>
       <div class="faq-card">
         <h6 class="blue">Who makes BlueOS?</h6>
-        <p>BurnyLlama, me, makes BlueOS. You can find it on <a href="https://github.com/BurnyLlama/blueos">GitHub</a>.</p>
+        <p>Check out the <a href="index3.html">Crew</a>. You can find it on <a href="https://github.com/b-blueos">GitHub</a>.</p>
       </div>
       <div class="faq-card">
         <h6 class="blue">Who should use BlueOS?</h6>
@@ -31,10 +38,10 @@
         <h6 class="blue">Can BlueOS be installed as an overlay straight onto Arch? </h6>
         <p>Not yet, but I have ideas to do it. Technically BlueOS is just Arch with some overlays, so I will only have to make a script for it...</p>
       </div>
-      <div class="faq-card">
+      <div class="faq-card" id="wide">
         <h6 class="blue">Pre-requisites:</h6>
           <ul>
-            <li>32 GB storage space (Recommended, would work with less...)</li>
+            <li>32 GB storage space. (64 GB is recommended.)</li>
             <li>A USB-Drive or CD to be used as installation media...</li>
             <li>Time...</li>
             <li>An internet-connection.</li>
@@ -43,32 +50,6 @@
       </div>
     </div>
     <br> <br>
-    <h3 class="blue text-center">Downloads:</h3>
-    <p>Currently there are no downloads, as I have yet to make a stable enough build.</p>
-    <p>Although, you could go to <a href="https://github.com/BurnyLlama/blueos">GitHub</a> and compile a beta build yourself...</p>
-   <br> <br>
-   <h3 class="blue text-center">Changelog:</h3>
-   <p>Upcomming versions (Ideas at least...): <br>
-     Sea: Supposed to have an installscript so you can install it straight onto an Arch-build. <br>
-     Sky: A UI-update... <br>
-     These updates may or may not be released as they are in the "thinking stage"....
-   </p> <br>
-  <div class="changelog">
-    <p>Dolphin (Version 1.0)</p>
-    <code>Initial release, so I don't really know what will be here yet...
-      <ul>
-        <li>Added BlueOS Package Manager... I don't know what to call it in the end... (Ideas: BPM, BLOS, Blue)</li>
-        <li>Added Install-script. Requires: </li>
-          <ul class="indent-short">
-            <li>32 GB storage space (Recommended, would work with less...)</li>
-            <li>A USB-Drive or CD to be used as installation media...</li>
-            <li>Time...</li>
-            <li>An internet-connection.</li>
-            <li>A UEFI-System, I am currently not supporting regular BIOS... :(</li>
-          </ul>
-        <li>Added custom GRUB and Plymouth themes.</li>
-      </ul>
-    </code>
   </div> </div>
 </div><br> <br>
 
