@@ -1,0 +1,177 @@
+/* FONTS */
+@font-face {
+  font-family: 'NotoSans';
+  src: url('NotoSans-Regular.ttf');
+}
+* {
+  font-family: 'NotoSans';
+}
+
+/* SIZE DECLARATION */
+@media screen and (min-width: 0px) {
+  :root {
+    font-size: 10pt; margin: 0; padding: 0;
+  }
+}
+@media screen and (min-width: 500px) {
+  :root {
+    font-size: 11pt; margin: 0; padding: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  :root {
+    font-size: 12pt; margin: 0; padding: 0;
+  }
+}
+@media screen and (min-width: 1500px) {
+  :root {
+    font-size: 13pt; margin: 0; padding: 0;
+  }
+}
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 14pt; margin: 0; padding: 0;
+  }
+}
+
+/* GENERAL */
+h1 {
+  font-size: 1.3rem;text-align: center;
+  color: #4b4bff;
+  margin: 0 0 .5rem 0;
+  grid-column: 1 / 9;
+}
+h2 {
+  font-size: 1rem;
+  color: #387499;
+  margin: 1rem .2rem .2rem .8rem;
+  grid-column: 1 / 9;
+}
+p {
+  grid-column: 1 / 9; margin: .1rem;
+}
+section {
+  grid-column: 1 / 9;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; display: grid;
+  border-bottom: .2rem solid #4b4bff; padding-bottom: 1rem;
+}
+section p {
+  grid-column: 5 / 9;
+  padding: 1rem;
+}
+section img {
+  grid-column: 2 / 5; height: auto; width: 100%;
+  border-radius: .3rem; 
+}
+.mail {
+  grid-column: 1 / 9; margin: .1rem; color: #011E3E;
+}
+note {
+  border-left: .3rem #4b4bff solid; grid-column: 1 / 6;
+  border-radius: .2rem; color: #4b4bff;
+  padding: .5rem 1rem; margin: .5rem 1rem;
+  font-size: .8rem; background: #6d6dff55;
+  flex-shrink: 100%;   display: inline-flex; flex-wrap: wrap;
+}
+/* LAYOUT */
+* {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.banner {
+  background: #4b4bff;
+  grid-column: 1 / 13;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: baseline;
+}
+.banner img {
+  height: 5rem; width: 5rem; margin-top: .5rem;
+  border-radius: 100%; box-shadow: 0 0 2rem #4b4b4b;
+}
+.banner p {
+  width: 100%; margin-top: -2.5rem; padding: 0;
+  text-align: center; font-size: 2rem;
+  color: white; font-weight: bold; text-shadow: 0 0 1rem #4b4b4b;
+}
+nav {
+  grid-column: 4 / 10;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: space-around;
+  margin: .5rem; margin-top: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: .2rem solid #4b4bff;
+}
+nav button {
+  padding: .5rem 1rem;
+  border: 0; outline: 0;
+  background: none;
+  color: #4b4bff; border-radius: .3rem;
+  font-size: 1.1rem;
+  font-family: 'NotoSans';
+}
+main {
+  grid-column: 3 / 11;
+}
+.page {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+footer {
+  grid-column: 1 / 13;
+  margin-top: 3rem; justify-content: space-between;
+  display: flex; flex-wrap: wrap;
+}
+footer .info {
+  width: 100%; padding-left: 3rem; padding-right: 3rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: center; align-self: center; align-content: center;
+}
+.info h1 {
+  font-size: .65rem; color: #6d6ddd; margin-left: 0; font-weight: bold;
+}
+.info p {
+  font-size: .6rem; color: #7e7ecc;
+}
+.info a {
+  color: #ff4bff; font-weight: bold;
+}
+.info div {
+  width: 20%; margin: .5rem 0;
+}
+.info .love-holder {
+  display: flex; width: 25%;
+  align-items: center; align-self: center; align-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.info div .love {
+  display: flex;  color: #ff4b4b;
+  align-items: center; align-self: center; align-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+.love span{
+  color: #ff4b4b; font-weight: bold; font-size: 2rem;
+  padding: .2rem;
+}
+.info .page-info{
+  text-align: right;
+}
+
+/* RESPONSIVE YOUTUBE EMNED*/
+/* Credit: https://embedresponsively.com/ */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; grid-column: 3 / 7; border-radius: 1rem;}
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
