@@ -1,67 +1,96 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="sv" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/main.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueOS</title>
-    </script>
+    <title>BlueOS [BETA]</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-<a href="https://blueos.burnyllama.tk/BETA">Check out the BETA-Build (newer build) of the page!</a>
-<div class="grid-root">
-<div class="grid-content-wrapper-small"> <br>
-  <h1 class="blue text-center text-enormouser">BlueOS</h1>
-  <br>
-<div class="menubar">
-  <a href="index.html"><button id="active">Introduction</button></a>
-  <a href="downloads.html"><button>Downloads</button></a>
-  <a href="jobs.html"><button>Contribute</button></a>
-</div> <br>
-<div class="showcase">
-  <img src="logo.png" alt="LOGO">
-  <div class="showcase-content">
-    <h3 class="blue">What is BlueOS?</h3>
-    <p><b class="blueD">BlueOS is an Operative System based on <a href="archlinux.org">Arch Linux</a>.
-       It is a spare-time hobby-project made by some developer with too much free time.
-       We hope to have our first release of the OS in the automn of 2019. </b> <br>
-       We will release almost every part of the project under the GPL V.3 License,
-       as this project strive for an internet society which can offer software and Operative Systems for free.
-       If you want to collaborate please check out the <a href="jobs.html">Contribute-tab</a>. </p>
-       <p><i><b class="blue">Should you use BlueOS?</b></i></p>
-       <p>Well, it depends. If you want 100% complete control of what gets installed on your system, then BlueOS is nothing for you.
-         BlueOS is for people who wants a simple distrubution, it is based on Arch, which has the rumor of being har to install,
-         but not to worry! As BlueOS has an automatic script to install the OS without hassle.
-       </p>
-  </div>
-  <hr class="blue hr-thick hr-center"> <br>
+    <div class="banner">
+      <img src="./images/logo.png" alt="Image not found: logo.png">
+      <p>BlueOS</p>
+    </div>
+    <nav>
+      <button type="button" name="button" id="home" onclick="showHome()" style="background: #4b4bff22;"><img src="./images/home.svg" alt="">Home</button>
+      <button type="button" name="button" id="faq" onclick="showFAQ()"><img src="./images/FAQ.svg" alt="">FAQ</button>
+      <button type="button" name="button" id="gp" onclick="showGP()"><img src="./images/download.svg" alt="">Downloads</button>
+      <button type="button" name="button" id="contact"onclick="showContact()"><img src="./images/contribute.svg" alt="">Contact & Contribution</button>
+    </nav>
+    <main>
+      <label class="menu">
+        <input type="checkbox" class="input">
+          <div class="menu-icon">
+            <div class="menu-col"></div>
+            <div class="menu-col"></div>
+            <div class="menu-col"></div>
+          </div>
+          <div class="menu-content">
+            <h1>Settings:</h1>
+            <div><p>Dark Mode: </p> <label class="switch"><input type="checkbox" class="switcher" id="darkmode" onclick="darkMode()"><span class="slider"></span></label></div>
+            <div><p>Serifs: </p> <label class="switch"><input type="checkbox" class="switcher" id="serifs" onclick="serifs()"><span class="slider"></span></label></div>
+            <div><p>Larger Text: </p> <label class="switch"><input type="checkbox" class="switcher" id="largetext" onclick="largeText()"><span class="slider"></span></label></div>
+          </div>
+        </label>
+      <div class="home page">
+        <section>
+          <h1>Welcome to BlueOS!</h1>
+          <div class="banner-image"><img src="./images/banner.png" alt="Image not found: banner.png"></div>
+          <h2>Introduction</h2>
+          <p>
+            BlueOS is a linux distribution based on <a href="https://archlinux.org">Arch Linux<span>Arch Linux is a Linux distro using a rolling release schedule. (Click for more info.)</span></a>. <br><br>
+            It is a spare time, hobby, project I am working on, and then mostly for the learning experience! <br><br>
+            Right now I, BurnyLlama, is the only one working on this project, but another developer known as Gochady has said he's interested in the project and
+            will probably start working on it too. And together we hope to bring the first release of BlueOS sometime during <a>Q4<span>The last quarter of the year, October, November and December.</span></a> this year (2019). <br><br>
+            This project will be released under the GPL V3 License, as the nature of linux is free and open source software, which we will strive to keep up!
+          </p>
+          <h2>Should you use BlueOS?</h2>
+          <p>
+            Probably not, not yet at least, as BlueOS is not yet done enough. But when it is done you <b>could</b> use it.
+            As of now it is hard to state if there will be any special features in BlueOS... Although we will strive to make BlueOS as customizable as possible, but still leave
+            it as unbloated as possible. As we shall believe in choice!
+            It will include install scripts for Arch Linux which would make an easier/"less worky" way.
+          </p>
+          <h2>Gallery</h2>
+          <p>Here are some screenshots from the early versions of BlueOS. <br> <i>(Hover the images for larger view.)</i> </p>
+            <img src="./images/screenshot0.png" alt="" class="scalable-image">
+            <img src="./images/screenshot1.png" alt="" class="scalable-image">
+        </section>
+      </div>
+      <div class="faq page" style="display: none;">
 
-<h3 class="blue"> <span class="whiteB">...</span> Meet the Crew: <span class="whiteB">...</span> </h3>
-<hr class="invisable hr-double"> <br>
-  <img src="burnyllama.png" alt="BurnyLlama">
-  <div class="showcase-content">
-    <h3 class="blue">BurnyLlama</h3>
-    <h6 class="blue">Lead-Developer, Lead-Designer</h6>
-    <p>The lead-developer since the beginning of this project... <br>
-      15-years old, amateur developer and amateur graphic designer. <br>
-      A proud part of this project. <br>
-      Also, this page is be BurnyLlama! <b class="blue">:)</b>
-    </p>
-  </div>
-  <hr class="blue hr-thick-dashed hr-center">
+      </div>
+      <div class="contact page" style="display: none;">
 
-  <img src="css/images/svg/Profile/blue.svg" alt="Gochady">
-  <div class="showcase-content">
-    <h3 class="blue">Gochady</h3>
-    <h6  class="blue">Developer</h6>
-    <p>The second developer that joined this project... <br>
-      The legend has it that he is a savage programmer/hacker.
-    </p>
-  </div>
-</div>
+      </div>
+      <div class="gp page" style="display: none;">
 
-</div>
-</div>
-<br> <br> <p class="text-center"><b><var class="text-center blueD blueBBG"> Page made with ❤ by BurnyLlama </var></b></p> <br> <br>
-</body>
+      </div>
+    </main>
+
+    <footer>
+      <div class="info">
+        <div class="copyright">
+          <h1>Copyright Information:</h1>
+          <p>Pictures and Arts: BurnyLlama 2019 <br>
+            This page, design and code: BurnyLlama (<a href="burnyllama.tk">WebSite</a>) [Open Source] <br>
+            Font - Noto Sans: Google (<a href="https://fonts.google.com/specimen/Noto+Sans?selection.family=Noto+Sans">Find it here</a>) [Open Source] <br>
+            Font - Noto Serif: Google (<a href="https://fonts.google.com/specimen/Noto+Serif?selection.family=Noto+Serif">Find it here</a>) [Open Source]
+          </p>
+        </div>
+        <div class="love-holder">
+          <p class="love">Made with</p><p class="love"><span>❤️</span></p><p class="love">by BurnyLlama</p>
+        </div>
+        <div class="page-info">
+          <h1>Information about the page:</h1>
+          <p>Source code - <a href="https://github.com/b-blueos/webpage">GitHub</a> <br>
+            This page is created by BurnyLlama. <br>
+            This page does NOT use cookies. <br>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" charset="utf-8" type="text/javascript"></script>
+  </body>
 </html>

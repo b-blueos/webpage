@@ -1,3 +1,4 @@
+@import "./mobile.css";
 /* FONTS */
 @font-face {
   font-family: 'NotoSans';
@@ -8,17 +9,7 @@
 }
 
 /* SIZE DECLARATION */
-@media screen and (min-width: 0px) {
-  :root {
-    font-size: 10pt; margin: 0; padding: 0;
-  }
-}
-@media screen and (min-width: 500px) {
-  :root {
-    font-size: 11pt; margin: 0; padding: 0;
-  }
-}
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1201px) {
   :root {
     font-size: 12pt; margin: 0; padding: 0;
   }
@@ -41,30 +32,52 @@ h1 {
   margin: 0 0 .5rem 0;
   grid-column: 1 / 9;
 }
-h2 {
-  font-size: 1rem;
-  color: #387499;
-  margin: 1rem .2rem .2rem .8rem;
-  grid-column: 1 / 9;
-}
-p {
-  grid-column: 1 / 9; margin: .1rem;
-}
 section {
-  grid-column: 1 / 9;
+  grid-column: 2 / 8;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; display: grid;
   border-bottom: .2rem solid #4b4bff; padding-bottom: 1rem;
 }
 section p {
-  grid-column: 5 / 9;
-  padding: 1rem;
+  grid-column: 1 / 9;
+  padding: 0 0 0 .5rem; margin: .2rem 0 .3rem 0;
+}
+section p a {
+  text-decoration: none; border-bottom: .2rem solid #4b4bff; background: #4b4bff22; padding: 0 .5rem;
+}
+@keyframes anchor {
+  from {
+    background: #4b4bff22;
+  }
+  to {
+    background: #4b4bff33;
+  }
+}
+section p a:hover {
+  animation: anchor .2s linear 0s 1 forwards;
+}
+section h2 {
+  font-size: 1.1rem; font-weight: bold;
+  color: #4b4bff;
+  margin: 1rem 0 .3rem 0; padding: 0;
+  grid-column: 2 / 8;
 }
 section img {
-  grid-column: 2 / 5; height: auto; width: 100%;
-  border-radius: .3rem; 
+  grid-column: 3 / 7; height: auto; width: 100%;
+  border-radius: .3rem; margin: .2rem;
 }
-.mail {
-  grid-column: 1 / 9; margin: .1rem; color: #011E3E;
+section img:hover {
+  animation: image .12s linear 0s 1 forwards;
+}
+@keyframes image {
+  0% {
+    grid-column: 3 / 7;
+  }
+  50% {
+    grid-column: 2 / 8;
+  }
+  100% {
+    grid-column: 1 / 9;
+  }
 }
 note {
   border-left: .3rem #4b4bff solid; grid-column: 1 / 6;
@@ -92,12 +105,12 @@ body {
   align-content: baseline;
 }
 .banner img {
-  height: 5rem; width: 5rem; margin-top: .5rem;
+  height: 5rem; width: 5rem; margin-top: .5rem; background: #0000;
   border-radius: 100%; box-shadow: 0 0 2rem #4b4b4b;
 }
 .banner p {
   width: 100%; margin-top: -2.5rem; padding: 0;
-  text-align: center; font-size: 2rem;
+  text-align: center; font-size: 2rem; background: #0000;
   color: white; font-weight: bold; text-shadow: 0 0 1rem #4b4b4b;
 }
 nav {
@@ -108,7 +121,7 @@ nav {
   align-content: center;
   justify-content: space-around;
   margin: .5rem; margin-top: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: .1rem;
   border-bottom: .2rem solid #4b4bff;
 }
 nav button {
@@ -116,8 +129,27 @@ nav button {
   border: 0; outline: 0;
   background: none;
   color: #4b4bff; border-radius: .3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: 'NotoSans';
+  margin: 1rem;
+  display: flex; align-items: center;
+  background: #4b4bff0f;
+}
+@keyframes menu-button {
+  from {
+    font-size: 1rem; margin: .5rem;
+  }
+  to {
+    font-size: 1.1rem; margin: .1rem; background: #4b4bff28;
+  }
+}
+nav button:hover {
+  animation: menu-button .1s linear 0s 1 forwards;
+}
+nav button img {
+  height: 2rem; width: 2rem;
+  margin: .3rem .5rem .3rem 0; padding: .5rem;
+  background: #4b4bff22; border-radius: .2rem;
 }
 main {
   grid-column: 3 / 11;
@@ -134,11 +166,26 @@ footer {
 }
 footer .info {
   width: 100%; padding-left: 3rem; padding-right: 3rem;
-  display: flex; flex-wrap: wrap; justify-content: space-between;
-  align-items: center; align-self: center; align-content: center;
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.info h1 {
-  font-size: .65rem; color: #6d6ddd; margin-left: 0; font-weight: bold;
+.info .copyright {
+  grid-column: 1 / 2;
+}
+.info .page-info {
+  grid-column: 4 / 5;
+}
+.info .love-holder {
+  grid-column: 2 / 4;
+  display: flex; margin: 0 auto;
+  align-items: center; align-self: center; align-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.info .copyright h1 {
+  font-size: .65rem; color: #6d6ddd; margin-left: 0; font-weight: bold; text-align: left;
+}
+.info .page-info h1 {
+  font-size: .65rem; color: #6d6ddd; margin-left: 0; font-weight: bold; text-align: right;
 }
 .info p {
   font-size: .6rem; color: #7e7ecc;
@@ -146,22 +193,14 @@ footer .info {
 .info a {
   color: #ff4bff; font-weight: bold;
 }
-.info div {
-  width: 20%; margin: .5rem 0;
-}
-.info .love-holder {
-  display: flex; width: 25%;
-  align-items: center; align-self: center; align-content: center;
-  text-align: center;
-  font-weight: bold;
-}
-.info div .love {
+.info .love-holder .love {
   display: flex;  color: #ff4b4b;
   align-items: center; align-self: center; align-content: center;
   text-align: center;
   font-weight: bold;
-  font-size: 1rem;
-  margin: 0 auto;
+  font-size: 1.2rem;
+  margin: 0 auto; padding: .2rem 1rem;
+  border: .1rem solid #ff4b4b; border-radius: .4rem
 }
 .love span{
   color: #ff4b4b; font-weight: bold; font-size: 2rem;
@@ -175,3 +214,28 @@ footer .info {
 /* Credit: https://embedresponsively.com/ */
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; grid-column: 3 / 7; border-radius: 1rem;}
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/* ON LOAD */
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  overflow-x: hidden;
+  animation: slidein 1s linear 0s 1 forwards;
+}
+
+/* PHONE OPTIMIZATION */
+@media screen and (max-width: 1200px) {
+  main {
+    grid-column: 2 / 13;
+  }
+  section {
+    grid-column: 1 / 9;
+  }
+}

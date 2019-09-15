@@ -1,0 +1,13 @@
+.banner {
+  width: 100%; height: 6rem; grid-column: 1 / 13;
+  display: flex; justify-content: center; flex-wrap: wrap; align-content: baseline; background: #4b4bff;
+}
+.banner img {
+  height: 5rem; width: 5rem; border-radius: 100%;
+  box-shadow: 0 0 2rem #4b4b4b; margin-top: .5rem;
+}
+.banner p {
+  text-align: center; margin-top: -2.5rem; width: 100%;
+  color: #fff; font-size: 2rem; font-weight: bold;
+  text-shadow: 0 0 2rem #4b4b4b;
+}

@@ -1,0 +1,18 @@
+@import "banner.css";
+@import "navbar.css";
+@import "footer.css";
+@import "layout.css";
+/**/
+@import "mobile.css";
+
+@media screen and (min-width: 1201px) {:root {font-size: 12pt; }} @media screen and (min-width: 1500px) {:root {font-size: 13pt; }}@media screen and (min-width: 2000px) {:root {font-size: 14pt; }}
+* {margin: 0; box-sizing: border-box;}
+
+@font-face {font-family: 'NotoSans';src: url('NotoSans-Regular.ttf');} @font-face {font-family: 'NotoSerif';src: url('NotoSerif-Regular.ttf');}
+body {font-family: 'NotoSans';}
+
+body {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; overflow-x: hidden;}
+main {
+  grid-column: 2 / 12;
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
