@@ -4,10 +4,10 @@
 }
 .banner img {
   height: 5rem; width: 5rem; border-radius: 100%;
-  box-shadow: 0 0 2rem #4b4b4b; margin-top: .5rem;
+  box-shadow: 0 0 2rem #0008; margin-top: .5rem;
 }
 .banner p {
   text-align: center; margin-top: -2.5rem; width: 100%;
   color: #fff; font-size: 2rem; font-weight: bold;
-  text-shadow: 0 0 2rem #4b4b4b;
+  text-shadow: 0 0 2rem #0008;
 }

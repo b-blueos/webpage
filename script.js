@@ -55,8 +55,8 @@
   };
   function largeText() {
     if (document.getElementById('largetext').checked == true) {
-      document.body.style.cssText += "font-size: 16pt; transition: .3s;";
+      document.body.style.cssText += "font-size: 18pt; transition: .3s;";
     } else {
-      document.body.style.cssText += "font-size: 12pt; transition: .3s;";
+      document.body.style.cssText += "font-size: 13pt; transition: .3s;";
     };
   };

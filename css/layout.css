@@ -15,7 +15,7 @@
 .page section h2 {
   grid-column: 1 / 10; color: #4b4bff; font-size: 1.2rem; margin-top: 1rem;
 }
-.page section img {
+.page section .scalable-image {
   grid-column: 3 / 7; margin: .2rem;
   width: 100%; height: auto; border-radius: .3rem;
 }
@@ -36,7 +36,7 @@
 .page section * a span {
   visibility: hidden;
   background-color: #4b4bff; color: white; box-shadow: 0 0 1rem #0008; text-shadow: 0 0 1rem #0008;
-  padding: .5rem; border-radius: .2rem; width: 15rem; font-size: .8rem;
+  padding: .5rem; border-radius: .2rem; width: 15rem; font-size: .8em;
   position: absolute; z-index: 1; bottom: 2rem; left: 50%; margin-left: -7.5rem;
 }
 .page section * a span::after {
@@ -48,6 +48,18 @@
   visibility: visible;
 }
 
+/* FAQ */
+.faq section div {
+  background: #4b4bff4b; padding: 1rem 1rem 2rem 1rem; border-radius: .3rem;
+}
+.faq section div:nth-child(odd) {
+  grid-column: 1 / 5; margin: .5rem 1rem .5rem 5rem;
+}
+.faq section div:nth-child(even) {
+  grid-column: 5 / 9; margin: .5rem 5rem .5rem 1rem;
+}
+
+/* MENU */
 .menu {
   grid-column: 1 / 12
 }
@@ -99,4 +111,40 @@
   to {
     margin-left: 0; height: auto;
   }
+}
+
+ul li {
+  list-style-type: none;
+}
+ul li::before {
+  content: "\2022"; color: #4b4bff; margin: 0 .5rem;
+}
+
+.member {
+  background: #4b4bff4b; border-radius: .5rem; padding: 0;
+  grid-column: span 2; margin: 2rem;
+}
+/*.member:nth-child(odd) {
+  grid-column: 2 / 4;
+}
+.member:nth-child(even) {
+ grid-column: 6 / 8;
+}*/
+.member img {
+  background: #4b4bff; width: 100%; height: auto; margin: 0; padding: 0;
+  border-radius: .5rem .5rem 0 0;
+}
+.member p {
+  padding: 1rem;
+}
+.member h2 {
+  font-size: 1.3rem;padding: .2rem 1rem;
+}
+.member h3 {
+  font-size: 1.05rem; font-weight: bold; padding: .2rem 1rem;
+}
+
+
+.contribute {
+  grid-column: 2 / 8;
 }
