@@ -4,12 +4,23 @@ nav {
   flex-wrap: wrap;
 }
 nav button {
-  font-size: 1rem; padding: .5rem; width: 80%;
+  font-size: 1em; padding: .5rem; width: auto;
 }
 nav button img {
-  height: 1.2rem; width: 1.2rem; padding: .2rem;
+  display: none;
 }
 /* MAIN */
+
+/* FAQ */
+.faq section div {
+  grid-column: span 8; margin: .5rem 0; margin: .5rem;
+}
+
+/* MEET THE TEAM */
+.member {
+  background: #4b4bff4b; border-radius: .5rem; padding: 0;
+  grid-column: span 4; margin: 2rem;
+}
 
 /* FOOTER */
 .info .love-holder {
@@ -22,8 +33,17 @@ nav button img {
   font-size: 1rem; margin: 0; padding: 0;
 }
 }
+
+/* TEENY */
 @media screen and (max-width: 500px) {:root {font-size: 10pt;}
 nav button {
   font-size: 0; padding: .5rem; width: auto;
+}
+nav button img {
+  height: 2rem; width: 2rem; padding: .4rem; border-radius: .3rem; display: block;
+}
+.member {
+  background: #4b4bff4b; border-radius: .5rem; padding: 0;
+  grid-column: span 8; margin: 2rem;
 }
 }
