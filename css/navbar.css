@@ -23,27 +23,26 @@ nav button img {
   }
 }
 
-
 .switch .switcher {
   opacity: 0; width: 0; height: 0;
 }
 .switch .slider {
-  height: 1.5em; width: 3em; background: #4b4b4b; position: absolute; border-radius: 1em; margin: 0;
+  height: 1em; width: 3em; background: #4b4b4b4b; position: absolute; border-radius: 1em; margin: 0;
   transition: .2s;
 }
-.switch .slider::before {
+.switch .slider .dot {
   content: ""; position: absolute;
-  width: 1em; height: 1em; border-radius: 1em;
-  background: white; margin: .25em 0 0 .25em;
+  width: 1.5em; height: 1.5em; border-radius: 1em;
+  background: #4b4b4b; margin: -.25em 0;
   transition: .2s;
 }
 .switch .switcher:checked ~ .slider {
-  height: 1.5em; width: 3em; background: #4b4bff; position: absolute; border-radius: 1em;
+  height: 1em; width: 3em; background: #4b4bff4b; position: absolute; border-radius: 1em; margin: 0;
   transition: .2s;
 }
-.switch .switcher:checked ~ .slider::before {
+.switch .switcher:checked ~ .slider .dot {
   content: ""; position: absolute;
-  width: 1em; height: 1em; border-radius: 1em;
-  background: white; margin: .25em 0 0 1.75em;
+  width: 1.5em; height: 1.5em; border-radius: 1em;
+  background: #4b4bff; margin: -.25em 0 0 1.5em;
   transition: .2s;
 }
