@@ -12,26 +12,29 @@
       <p>BlueOS</p>
     </div>
     <nav>
-      <button type="button" name="button" id="home" onclick="showHome()" style="background: #4b4bff22;"><img src="./images/home.svg" alt="">Home</button>
-      <button type="button" name="button" id="faq" onclick="showFAQ()"><img src="./images/FAQ.svg" alt="">Questions</button>
-      <button type="button" name="button" id="gp" onclick="showGP()"><img src="./images/download.svg" alt="">Downloads</button>
-      <button type="button" name="button" id="contact"onclick="showContact()"><img src="./images/contribute.svg" alt="">Meet the Team</button>
+      <button type="button" name="button" id="home" onclick="changePage('home')" style="background: #4b4bff22;"><img src="./images/home.svg" alt="">Home</button>
+      <button type="button" name="button" id="faq" onclick="changePage('faq')"><img src="./images/FAQ.svg" alt="">Questions</button>
+      <button type="button" name="button" id="gp" onclick="changePage('download')"><img src="./images/download.svg" alt="">Downloads</button>
+      <button type="button" name="button" id="contact"onclick="changePage('contact')"><img src="./images/contribute.svg" alt="">Meet the Team</button>
     </nav>
+
+    <label class="menu">
+      <input type="checkbox" class="input">
+      <div class="menu-icon">
+        <div class="menu-col"></div>
+        <div class="menu-col"></div>
+        <div class="menu-col"></div>
+      </div>
+      <div class="menu-content">
+        <h1>Settings:</h1>
+        <div><p>Dark Mode: </p> <label class="switch"><input type="checkbox" class="switcher" id="darkmode" onclick="darkMode()"><span class="slider"><i class="dot"></i></span></label></div>
+        <div><p>Serifs: </p> <label class="switch"><input type="checkbox" class="switcher" id="serifs" onclick="serifs()"><span class="slider"><i class="dot"></i></span></label></div>
+        <div><p>Larger Text: </p> <label class="switch"><input type="checkbox" class="switcher" id="largetext" onclick="largeText()"><span class="slider"><i class="dot"></i></span></label></div>
+      </div>
+    </label>
+
+
     <main>
-      <label class="menu">
-        <input type="checkbox" class="input">
-          <div class="menu-icon">
-            <div class="menu-col"></div>
-            <div class="menu-col"></div>
-            <div class="menu-col"></div>
-          </div>
-          <div class="menu-content">
-            <h1>Settings:</h1>
-            <div><p>Dark Mode: </p> <label class="switch"><input type="checkbox" class="switcher" id="darkmode" onclick="darkMode()"><span class="slider"><i class="dot"></i></span></label></div>
-            <div><p>Serifs: </p> <label class="switch"><input type="checkbox" class="switcher" id="serifs" onclick="serifs()"><span class="slider"><i class="dot"></i></span></label></div>
-            <div><p>Larger Text: </p> <label class="switch"><input type="checkbox" class="switcher" id="largetext" onclick="largeText()"><span class="slider"><i class="dot"></i></span></label></div>
-          </div>
-        </label>
       <div class="home page">
         <section>
           <h1>Welcome to BlueOS!</h1>
@@ -118,7 +121,7 @@
           </div>
         </section>
       </div>
-      <div class="gp page" style="display: none;"> <b>
+      <div class="download page" style="display: none;"> <b>
         <section>
           <p>THERE'S NO DOWNLOADS AS OF NOW!</p>
           <p>Go to <a href="https://github.com/b-blueos/webpage">GitHub</a> and check out the current code if you'd like to see how things are slowly working out.</p>

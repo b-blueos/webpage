@@ -1,43 +1,13 @@
-  function showHome() {
-    document.getElementById('home').style.cssText = "background: #4b4bff22;";
-    document.getElementById('faq').style.cssText = "border: 0;";
-    document.getElementById('contact').style.cssText = "border: 0;";
-    document.getElementById('gp').style.cssText = "border: 0;";
-    document.querySelector('.home').style.cssText = "display: ;";
-    document.querySelector('.faq').style.cssText = "display: none;";
-    document.querySelector('.contact').style.cssText = "display: none;";
-    document.querySelector('.gp').style.cssText = "display: none;";
-  };
-  function showFAQ() {
-    document.getElementById('home').style.cssText = "border: 0;";
-    document.getElementById('faq').style.cssText = "background: #4b4bff22;";
-    document.getElementById('contact').style.cssText = "border: 0;";
-    document.getElementById('gp').style.cssText = "border: 0;";
-    document.querySelector('.home').style.cssText = "display: none;";
-    document.querySelector('.faq').style.cssText = "display: ;";
-    document.querySelector('.contact').style.cssText = "display: none;";
-    document.querySelector('.gp').style.cssText = "display: none;";
-  };
-  function showContact() {
-    document.getElementById('home').style.cssText = "border: 0;";
-    document.getElementById('faq').style.cssText = "border: 0;";
-    document.getElementById('contact').style.cssText = "background: #4b4bff22;";
-    document.getElementById('gp').style.cssText = "border: 0;";
-    document.querySelector('.home').style.cssText = "display: none;";
-    document.querySelector('.faq').style.cssText = "display: none;";
-    document.querySelector('.contact').style.cssText = "display: ;";
-    document.querySelector('.gp').style.cssText = "display: none;";
-  };
-  function showGP() {
-    document.getElementById('home').style.cssText = "border: 0;";
-    document.getElementById('faq').style.cssText = "border: 0;";
-    document.getElementById('contact').style.cssText = "border: 0;";
-    document.getElementById('gp').style.cssText = "background: #4b4bff22;";
-    document.querySelector('.home').style.cssText = "display: none;";
-    document.querySelector('.faq').style.cssText = "display: none;";
-    document.querySelector('.contact').style.cssText = "display: none;";
-    document.querySelector('.gp').style.cssText = "display: ;";
-  };
+var pages = ["home", "faq", "contact", "download"];
+function changePage(newPage) {
+    for (i = 0; i < pages.length; i++) {
+        document.querySelector("." + pages[i]).style.display = 'none';
+    };
+    document.querySelector("." + newPage).style.display = 'grid';
+};
+
+document.querySelector(".home").style.display = 'grid';
+
 
   function darkMode() {
     if (document.getElementById('darkmode').checked == true) {

@@ -1,48 +1,32 @@
-nav {
-  grid-column: 3 / 11; display: flex; padding: .5rem;
+body > nav {
+  grid-area: nav;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  border-bottom: .2rem solid #4b4bff;
+  border-bottom: #4b4bff .25em solid;
 }
-nav button {
-  padding: .5rem; display: flex; align-items: center;
-  font-size: 1em; background: #4b4bff11; color: #4b4bff;
-  border: 0; border-radius: .3rem; outline: 0; margin: .5rem;
+body > nav > button {
+  height: auto;
+  width: auto;
+  padding: .5em;
+  margin: auto 0;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+  border: 0;
+  border-radius: .3em;
+  background-color: #4b4bff4b;
+  color: #4b4bff;
 }
-nav button:hover {
-  animation: button-hover .15s linear 0s 1 forwards;
+body > nav > button:hover {
+  padding: 1em 1.5em;
+  transition: .3s;
 }
-nav button img {
-  height: 2em; width: 2em;
-  margin: 0 .5em 0 0; padding: .4em;
-  background: #4b4bff22; border-radius: .2em;
-}
-
-@keyframes button-hover {
-  to {
-    background: #4b4bff28; padding: 1rem; margin: 0;
-  }
-}
-
-.switch .switcher {
-  opacity: 0; width: 0; height: 0;
-}
-.switch .slider {
-  height: 1em; width: 3em; background: #4b4b4b4b; position: absolute; border-radius: 1em; margin: 0;
-  transition: .2s;
-}
-.switch .slider .dot {
-  content: ""; position: absolute;
-  width: 1.5em; height: 1.5em; border-radius: 1em;
-  background: #4b4b4b; margin: -.25em 0;
-  transition: .2s;
-}
-.switch .switcher:checked ~ .slider {
-  height: 1em; width: 3em; background: #4b4bff4b; position: absolute; border-radius: 1em; margin: 0;
-  transition: .2s;
-}
-.switch .switcher:checked ~ .slider .dot {
-  content: ""; position: absolute;
-  width: 1.5em; height: 1.5em; border-radius: 1em;
-  background: #4b4bff; margin: -.25em 0 0 1.5em;
-  transition: .2s;
+body > nav > button > img {
+  height: 1.5em;
+  width: 1.5em;
+  padding: .15em;
+  border-radius: .15em;
+  background-color: #4b4bff4b;
 }

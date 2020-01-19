@@ -11,15 +11,25 @@
 @font-face {font-family: 'NotoSans';src: url('NotoSans-Regular.ttf');} @font-face {font-family: 'NotoSerif';src: url('NotoSerif-Regular.ttf');}
 body {font-family: 'NotoSans';}
 
-body {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; overflow-x: hidden;}
+body {
+  display: grid; 
+  grid-template-areas: 'banner banner banner' 'settings nav .' '. main .' 'footer footer footer';
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 1fr 10fr 1fr; 
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
 main {
-  grid-column: 2 / 12;
-  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-area: main;
+  display: block; 
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 body {
   animation: start-up .3s linear 0s 1 forwards;
-  color: red
 }
 @keyframes start-up {
   from {
