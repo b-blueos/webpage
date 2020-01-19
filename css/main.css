@@ -19,6 +19,7 @@ main {
 
 body {
   animation: start-up .3s linear 0s 1 forwards;
+  color: red
 }
 @keyframes start-up {
   from {
